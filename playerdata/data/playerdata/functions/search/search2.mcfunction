@@ -1,0 +1,5 @@
+#compare
+#if searchfor equals playerdata.id or there is no element in list, stop searching
+data modify storage playerdata search.compare set from storage playerdata search.searchfor
+execute store success score .not_found playerdata run data modify storage playerdata search.compare set from storage playerdata search.list[0].id
+execute if score .not_found playerdata matches 1 run function playerdata:search/search3
