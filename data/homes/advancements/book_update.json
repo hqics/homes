@@ -1,0 +1,18 @@
+{
+  "rewards": {
+    "function": "homes:book_update"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "lectern_books",
+            "nbt": "{homes:1b}"
+          }
+        ]
+      }
+    }
+  }
+}

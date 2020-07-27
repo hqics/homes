@@ -1,0 +1,1 @@
+tellraw @s {"extra":["Home ",{"nbt":"data.homes.color1","storage":"entitydb:","interpret":true,"extra":[{"nbt":"data.homes.homelist[0].id","storage":"entitydb:","interpret":true}]}," doesn't exist."],"nbt":"data.homes.color0","storage":"entitydb:","interpret":true}

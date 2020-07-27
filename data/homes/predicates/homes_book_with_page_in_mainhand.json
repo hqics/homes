@@ -1,0 +1,33 @@
+{
+  "condition": "minecraft:inverted",
+  "term": {
+    "condition": "minecraft:alternative",
+    "terms": [
+      {
+        "condition": "minecraft:inverted",
+        "term": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "nbt": "{homes:1b}"
+              }
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "equipment": {
+            "mainhand": {
+              "nbt": "{pages:[]}"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

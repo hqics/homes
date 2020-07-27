@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:empty",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:writable_book",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "extra": [
+                  {
+                    "text": "Enter the name of the home."
+                  }
+                ],
+                "nbt": "data.homes.color0",
+                "storage": "entitydb:",
+                "interpret": true,
+                "italic": false
+              },
+              "entity": "this"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{homes:1b,pages:[]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
