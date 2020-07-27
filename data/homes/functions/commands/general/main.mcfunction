@@ -1,4 +1,4 @@
-function entitydb:get
+function homes:get_player
 
 function homes:commands/general/main_
 

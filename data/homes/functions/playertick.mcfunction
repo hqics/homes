@@ -1,3 +1,5 @@
+execute unless score @s homes.logged_in matches ..2147483647 store success score @s homes.logged_in run function homes:enable_triggers
+
 function homes:enable_triggers
 
 scoreboard players set actions homes 0
