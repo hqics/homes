@@ -1,5 +1,4 @@
 {
-  "type": "minecraft:empty",
   "pools": [
     {
       "rolls": 1,
@@ -8,6 +7,10 @@
           "type": "minecraft:item",
           "name": "minecraft:writable_book",
           "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{homes:1b,pages:[]}"
+            },
             {
               "function": "minecraft:set_name",
               "name": {
@@ -22,10 +25,6 @@
                 "italic": false
               },
               "entity": "this"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{homes:1b,pages:[]}"
             }
           ]
         }
