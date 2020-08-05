@@ -6,3 +6,8 @@ execute if data storage homes: _saltshaker.homes[] in entitydb: run function hom
 
 #backwards compatability
 advancement revoke @a only homes:book_update
+
+#backwards cleaning up
+tag @a remove homes.delhome
+tag @a remove homes.sethome
+tag @a remove homes.home

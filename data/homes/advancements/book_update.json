@@ -1,6 +1,6 @@
 {
   "rewards": {
-    "function": "homes:book_update"
+    "function": "homes:book/book_update"
   },
   "criteria": {
     "requirement": {

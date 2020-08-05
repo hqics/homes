@@ -11,4 +11,4 @@ data modify storage entitydb: data.homes.homelist set from storage entitydb: sea
 execute if score not_found entitydb matches 1 run data remove storage entitydb: data.homes.homelist[0]
 execute unless data storage entitydb: data.homes.homelist[] run data remove storage entitydb: data.homes.homelist
 execute if score not_found entitydb matches 0 run data modify storage homes: homeId set from storage entitydb: data.homes.homelist[0].id
-execute if score not_found entitydb matches 0 run function homes:commands/general/main_
+execute if score not_found entitydb matches 0 run function homes:commands/general/main

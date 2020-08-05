@@ -1,6 +1,6 @@
 {
  "values": [
  "entitydb:load",
- "homes:load"
+ "homes:init/load"
  ]
 }

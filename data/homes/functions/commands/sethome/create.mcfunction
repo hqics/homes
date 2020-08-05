@@ -11,12 +11,10 @@ data modify storage entitydb: data.homes.homelist[0].Dimension set from storage 
 data remove storage homes: player
 
 function homes:commands/general/get_home_information
-
 execute if score not_found entitydb matches 1 run tellraw @s {"nbt":"click_events[0]","storage":"homes:click_events","interpret":true,"extra":[{"extra":["Set home ",{"nbt":"home_data","storage":"homes:","interpret":true}],"nbt":"data.homes.color0","storage":"entitydb:","interpret":true,"hoverEvent":{"action":"show_text","contents":[{"nbt":"data.homes.color0","storage":"entitydb:","interpret":true},{"text":"Click to teleport."}]}}]}
 execute if score not_found entitydb matches 0 in entitydb: run tellraw @s {"nbt":"click_events[0]","storage":"homes:click_events","interpret":true,"extra":[{"extra":["Set home ",{"nbt":"home_data","storage":"homes:","interpret":true},",\npreviously in ",{"nbt":"Text1","block":"0 0 -1","interpret":true}],"nbt":"data.homes.color0","storage":"entitydb:","interpret":true,"hoverEvent":{"action":"show_text","contents":[{"nbt":"data.homes.color0","storage":"entitydb:","interpret":true},{"text":"Click to teleport."}]}}]}
 function homes:tellraw/listhomes
 function homes:commands/general/next_click_event
-execute store result storage entitydb: data.homes.homelist[0].l_id int 1 run scoreboard players operation listhomes_id homes %= clickEventCount homes
 
 
 
@@ -26,10 +24,10 @@ function entitydb:search/search
 data modify storage homes: dimensions set from storage entitydb: search.list
 data remove storage entitydb: search
 
-forceload add 0 0
+forceload add ~ ~
 execute if score not_found entitydb matches 1 store result storage homes: dimensions[0].s_id int 1 run scoreboard players add max_dimension_id homes 1
 execute store result score dimension_id homes run data get storage homes: dimensions[0].s_id
 scoreboard players set found homes 0
 execute as @e[type=item_frame,tag=homes.dimensionMarker] if score @s homes = dimension_id homes run scoreboard players set found homes 1
-execute if score found homes matches 0 run summon item_frame 0 ~ 0 {Invulnerable:1b,Invisible:1b,Fixed:1b,Tags:["homes.dimensionMarker"]}
+execute if score found homes matches 0 run summon item_frame ~ ~ ~ {Invulnerable:1b,Invisible:1b,Fixed:1b,Tags:["homes.dimensionMarker"]}
 execute if score found homes matches 0 run scoreboard players operation @e[type=item_frame,tag=homes.dimensionMarker,dx=0] homes = dimension_id homes
