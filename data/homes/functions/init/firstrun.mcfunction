@@ -22,9 +22,7 @@ data modify storage homes: home_data set value '["",[{"nbt":"data.homes.color1",
 execute unless data storage homes: dimensions[] run scoreboard players set max_dimension_id homes 3
 execute unless data storage homes: dimensions[] run data merge storage homes: {dimensions:[{s_id:1,id:"minecraft:overworld"},{s_id:2,id:"minecraft:the_nether"},{s_id:3,id:"minecraft:the_end"}]}
 
-execute in entitydb: run forceload add 0 0
-execute in entitydb: run setblock 0 0 -1 oak_sign
-execute in entitydb: run setblock -1 0 0 shulker_box
+schedule function homes:init/setblocks 1
 
 #backwards compatability
 scoreboard players enable * homes.help
