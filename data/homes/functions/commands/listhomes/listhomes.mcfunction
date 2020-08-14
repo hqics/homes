@@ -1,4 +1,4 @@
-execute unless data storage entitydb: data.homes.homelist[] run tellraw @s {"extra":[{"text":"You haven't set any homes."}],"nbt":"data.homes.color0","storage":"entitydb:","interpret":true}
+execute unless data storage entitydb: data.homes.homelist[] run tellraw @s [{"nbt":"data.homes.color0","storage":"entitydb:","interpret":true},"You haven't set any homes."]
 
 execute if data storage entitydb: data.homes.homelist[] in entitydb: run function homes:commands/listhomes/print_and_get_next
 

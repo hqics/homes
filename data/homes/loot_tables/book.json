@@ -13,17 +13,15 @@
             },
             {
               "function": "minecraft:set_name",
-              "name": {
-                "extra": [
-                  {
-                    "text": "Enter the name of the home."
-                  }
-                ],
-                "nbt": "data.homes.color0",
-                "storage": "entitydb:",
-                "interpret": true,
-                "italic": false
-              },
+              "name": [
+                {
+                  "nbt": "data.homes.color0",
+                  "storage": "entitydb:",
+                  "interpret": true,
+                  "italic": false
+                },
+                "Enter the name of the home."
+              ],
               "entity": "this"
             }
           ]

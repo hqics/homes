@@ -19,8 +19,8 @@ execute if score homeId homes matches -15 run data modify storage homes: color s
 execute if score homeId homes matches -16 run data modify storage homes: color set value '{"text":"","color":"white"}'
 
 
-execute if score colortype homes matches 0 run tellraw @s {"extra":[{"text":"Changed the general text color."}],"nbt":"color","storage":"homes:","interpret":true}
-execute if score colortype homes matches 1 run tellraw @s {"extra":[{"text":"Changed the text color of the homes."}],"nbt":"color","storage":"homes:","interpret":true}
+execute if score colortype homes matches 0 run tellraw @s [{"nbt":"color","storage":"homes:","interpret":true},"Set the general text color."]
+execute if score colortype homes matches 1 run tellraw @s [{"nbt":"color","storage":"homes:","interpret":true},"Set the text color of the homes."]
 
 
 execute if score colortype homes matches 0 run data modify storage entitydb: data.homes.color0 set from storage homes: color

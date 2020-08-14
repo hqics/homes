@@ -8,5 +8,6 @@ execute if score triggerHome homes matches 1 run scoreboard players add actions 
 execute if score triggerSethome homes matches 1 run scoreboard players add actions homes 1
 execute if score triggerDelhome homes matches 1 run scoreboard players add actions homes 1
 execute if score triggerListhomes homes matches 1 run scoreboard players add actions homes 1
+execute if score triggerHelp homes matches 1 run scoreboard players add actions homes 1
 
 execute if score actions homes matches 1.. run function homes:trigger/check_tick_limit

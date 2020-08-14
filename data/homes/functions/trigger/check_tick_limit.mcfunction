@@ -1,5 +1,5 @@
 function homes:get_player
-execute if score actions homes matches 2.. run tellraw @s {"extra":[{"text":"You can't run more than 1 commands per tick."}],"nbt":"data.homes.color0","storage":"entitydb:","interpret":true}
+execute if score actions homes matches 2.. run tellraw @s [{"nbt":"data.homes.color0","storage":"entitydb:","interpret":true},"You can't run more than 1 commands per tick."]
 execute if score actions homes matches 1 run function homes:trigger/command
 function entitydb:save
 
