@@ -1,3 +1,4 @@
+#round to the nearest integer coordinates
 execute store result score x homes run data get storage entitydb: data.homes.homelist[0].Pos[0] 2
 execute store result score y homes run data get storage entitydb: data.homes.homelist[0].Pos[1] 2
 execute store result score z homes run data get storage entitydb: data.homes.homelist[0].Pos[2] 2

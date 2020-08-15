@@ -12,17 +12,15 @@ scoreboard objectives add homes.help trigger
 scoreboard objectives add homes dummy
 scoreboard objectives add homes.logged_in dummy
 
-data remove storage homes: dimensions
+scoreboard players set max_dimension_id homes 3
+data merge storage homes: {dimensions:[{s_id:1,id:"minecraft:overworld"},{s_id:2,id:"minecraft:the_nether"},{s_id:3,id:"minecraft:the_end"}]}
 kill @e[tag=homes.dimensionMarker]
+
 function homes:init/init_click_events
 scoreboard players set listhomes_id homes -1
 execute store result score clickEventCount homes if data storage homes:click_events click_events[]
 data modify storage homes: home_data set value '["",[{"nbt":"data.homes.color1","storage":"entitydb:","interpret":true},{"nbt":"data.homes.homelist[0].id","storage":"entitydb:","interpret":true}]," in ",{"nbt":"data.homes.homelist[0].Dimension","storage":"entitydb:"}," at ",{"score":{"name":"x","objective":"homes"}}," ",{"score":{"name":"y","objective":"homes"}}," ",{"score":{"name":"z","objective":"homes"}}]'
 
-execute unless data storage homes: dimensions[] run scoreboard players set max_dimension_id homes 3
-execute unless data storage homes: dimensions[] run data merge storage homes: {dimensions:[{s_id:1,id:"minecraft:overworld"},{s_id:2,id:"minecraft:the_nether"},{s_id:3,id:"minecraft:the_end"}]}
-
-execute in entitydb: run forceload add 0 0
 schedule function homes:init/setblocks 1
 
 #backwards compatability

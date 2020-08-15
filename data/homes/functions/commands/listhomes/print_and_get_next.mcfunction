@@ -1,3 +1,4 @@
+#round to the nearest integer coordinates
 execute store result score x homes run data get storage entitydb: data.homes.homelist[-1].Pos[0] 2
 execute store result score y homes run data get storage entitydb: data.homes.homelist[-1].Pos[1] 2
 execute store result score z homes run data get storage entitydb: data.homes.homelist[-1].Pos[2] 2
@@ -13,7 +14,8 @@ tellraw @s [{"hoverEvent":{"action":"show_text","contents":[{"nbt":"data.homes.c
 function homes:commands/general/next_click_event_
 execute store result storage entitydb: data.homes.homelist[-1].l_id int 1 run scoreboard players operation listhomes_id homes %= clickEventCount homes
 
-
+#get next home
 data modify storage entitydb: data.homes.homelist_temp prepend from storage entitydb: data.homes.homelist[-1]
 data remove storage entitydb: data.homes.homelist[-1]
+#run this function again if there is a next home
 execute if data storage entitydb: data.homes.homelist[] run function homes:commands/listhomes/print_and_get_next
