@@ -1,5 +1,5 @@
 #save the position, dimension, rotation of the player in case they will be teleported to the wrong dimension
-execute at @a[tag=homes.player] run summon minecraft:area_effect_cloud ~ 19999999 ~ {Tags:["homes.aec"]}
+execute at @a[tag=homes.player] run summon area_effect_cloud ~ 19999999 ~ {Tags:["homes.aec"]}
 execute at @a[tag=homes.player] run tp @e[tag=homes.aec,limit=1] ~ ~ ~ ~ ~
 
 #teleport the player

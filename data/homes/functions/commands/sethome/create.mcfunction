@@ -34,5 +34,5 @@ execute if score not_found entitydb matches 1 store result storage homes: dimens
 execute store result score dimension_id homes run data get storage homes: dimensions[0].s_id
 scoreboard players set found homes 0
 execute as @e[type=item_frame,tag=homes.dimensionMarker] if score @s homes = dimension_id homes run scoreboard players set found homes 1
-execute if score found homes matches 0 run summon item_frame ~ ~ ~ {Invulnerable:1b,Invisible:1b,Fixed:1b,Tags:["homes.dimensionMarker"]}
+execute if score found homes matches 0 run summon item_frame ~ ~ ~ {Invisible:1b,Fixed:1b,Tags:["homes.dimensionMarker"]}
 execute if score found homes matches 0 run scoreboard players operation @e[type=item_frame,tag=homes.dimensionMarker,dx=0] homes = dimension_id homes
