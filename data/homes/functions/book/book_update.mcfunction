@@ -6,4 +6,4 @@ execute if entity @s[tag=homes.has_book,predicate=homes:homes_book_with_page_in_
 clear @s[tag=!homes.has_book] #lectern_books{homes:1b}
 execute store result score itemCount homes run clear @s[tag=homes.has_book] #lectern_books{homes:1b} 0
 execute if score itemCount homes matches 2.. run clear @s #lectern_books{homes:1b}
-execute if score itemCount homes matches 2.. run function homes:commands/general/give_book_
+execute if score itemCount homes matches 2.. run function homes:book/give_book_

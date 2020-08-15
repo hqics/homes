@@ -1,8 +1,7 @@
-schedule function homes:tick 1
-
 execute as @a run function homes:playertick
 
 execute if data storage homes: _saltshaker.homes[] in entitydb: run function homes:_saltshaker/get_commands
+
 
 #backwards compatability
 advancement revoke @a only homes:book_update
@@ -11,3 +10,5 @@ advancement revoke @a only homes:book_update
 tag @a remove homes.delhome
 tag @a remove homes.sethome
 tag @a remove homes.home
+
+schedule function homes:tick 1
