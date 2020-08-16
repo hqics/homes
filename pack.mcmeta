@@ -1,6 +1,6 @@
 {
   "pack": {
     "pack_format": 6,
-    "description": ""
+    "description": {"text":"https://github.com/hqics/homes","clickEvent":{"action":"open_url","value":"https://github.com/hqics/homes"}}
   }
 }
