@@ -2,7 +2,7 @@ forceload add ~ ~
 data remove storage playerdata hom
 data modify storage playerdata hom set from block ~ ~ ~ RecordItem.tag.player
 data modify storage entitydb: UUID set from storage playerdata players_[0].id
-function entitydb:get
+function homes:get_player
 data modify storage entitydb: data.homes.homelist set from storage playerdata hom.homes
 
 execute unless data storage entitydb: data.homes.homelist[] run data remove storage entitydb: data.homes.homelist
