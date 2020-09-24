@@ -1,3 +1,5 @@
+scoreboard players set unnormalCommand homes 1
+
 scoreboard players set colortype homes 0
 execute if score homeId homes matches ..-17 store success score colortype homes run scoreboard players add homeId homes 16
 

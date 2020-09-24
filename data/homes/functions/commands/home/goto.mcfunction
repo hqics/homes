@@ -9,7 +9,7 @@ function homes:commands/home/tp
 
 #check if the player was teleported to the wrong dimension
 data modify storage homes: Dimension set from storage entitydb: data.homes.homelist[0].Dimension
-execute store result score incorrectDim homes run data modify storage homes: Dimension set from entity @a[tag=homes.player,limit=1] Dimension
+execute store success score incorrectDim homes run data modify storage homes: Dimension set from entity @a[tag=homes.player,limit=1] Dimension
 data remove storage homes: Dimension
 
 #teleport the player back if they were teleported to the wrong dimension

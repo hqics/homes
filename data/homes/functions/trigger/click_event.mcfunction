@@ -1,3 +1,5 @@
+scoreboard players set unnormalCommand homes 1
+
 scoreboard players set triggerListhomes homes 0
 scoreboard players set triggerHome homes 1
 

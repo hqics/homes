@@ -13,7 +13,7 @@ scoreboard objectives add homes dummy
 scoreboard objectives add homes.logged_in dummy
 
 scoreboard players set max_dimension_id homes 3
-data merge storage homes: {dimensions:[{s_id:1,id:"minecraft:overworld"},{s_id:2,id:"minecraft:the_nether"},{s_id:3,id:"minecraft:the_end"}]}
+data modify storage homes: dimensions set value [{s_id:1,id:"minecraft:overworld"},{s_id:2,id:"minecraft:the_nether"},{s_id:3,id:"minecraft:the_end"}]
 kill @e[tag=homes.dimensionMarker]
 
 function homes:init/init_click_events

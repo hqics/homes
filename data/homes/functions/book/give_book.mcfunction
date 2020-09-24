@@ -1,3 +1,5 @@
+scoreboard players set unnormalCommand homes 1
+
 execute if score triggerHome homes matches 1 run data modify storage entitydb: data.homes.bookCommand set value "home"
 execute if score triggerSethome homes matches 1 run data modify storage entitydb: data.homes.bookCommand set value "sethome"
 execute if score triggerDelhome homes matches 1 run data modify storage entitydb: data.homes.bookCommand set value "delhome"
