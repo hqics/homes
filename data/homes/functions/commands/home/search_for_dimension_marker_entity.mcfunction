@@ -1,7 +1,8 @@
-tag @s add homes.player
-
-#shouldn't happen
+#safety
 tag @e remove homes.dimension
+tag @a remove homes.player
+
+tag @s add homes.player
 
 execute store result score dimension_id homes run data get storage homes: dimensions[0].s_id
 scoreboard players set found homes 0
