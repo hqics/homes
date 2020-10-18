@@ -1,5 +1,4 @@
 # homes
-a minecraft home data pack
 
 `/trigger sethome/home/delhome set <number>` - sets/teleports to/deletes a home that has a number as its name (doesn't work with 1 as the number)<br>
 `/trigger sethome/home/delhome` - sets/teleports to/deletes a home after typing the name of the home in a book<br>
