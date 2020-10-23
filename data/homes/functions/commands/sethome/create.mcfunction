@@ -7,11 +7,9 @@ execute if score not_found entitydb matches 0 run function homes:commands/genera
 execute if score not_found entitydb matches 0 in entitydb: run data modify block 0 0 -1 Text1 set value '{"nbt":"home_data","storage":"homes:","interpret":true}'
 
 #save player data
-data modify storage homes: player set from entity @s
 data modify storage entitydb: data.homes.homelist[0].Rotation set from storage homes: player.Rotation
 data modify storage entitydb: data.homes.homelist[0].Pos set from storage homes: player.Pos
 data modify storage entitydb: data.homes.homelist[0].Dimension set from storage homes: player.Dimension
-data remove storage homes: player
 
 #tellraw
 function homes:commands/general/get_home_information
