@@ -11,5 +11,7 @@
   "ambient_light": 1,
   "fixed_time": 0,
   "logical_height": 0,
-  "infiniburn": "entitydb:empty"
+  "infiniburn": "entitydb:empty",
+  "min_y": 0,
+  "height": 256
 }

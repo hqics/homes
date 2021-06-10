@@ -4,7 +4,7 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "item": "written_book"
+        "items": ["written_book"]
       }
     }
   }
